@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>StickUp Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <header>
+        <img src = "./images/StickUpLogo.jpeg" alt="StickUp Logo" style = "float:right; height:150px; width:150px;margin-right: 300px;">
+    </header>
+
+    <h1 id="company"><b>StickUp Inc.</b></h1>
+
+    <body>
+        <nav style="font-size:150%">
+            <a href="jefejuell.github.io/stickup"><b>HOME</b></a>
+            <a href="jefejuell.github.io/stickup/StickUp.html"><b>What We DO</b></a>
+            <a href="jefejuell.github.io/stickup/ContactUs.html"><b>Contact Us</b></a>
+        </nav>
+        
+        <br><h2>Please click the button below to get a no obligation quote!</h2>
+
+        <button onclick = "yardQuote()"; style= "padding:20px; border-radius:10px; font-size: 30px;"><b>Click for a Quote!</b></button><br>
+
+        <br><h2>Email our customer service contact with questions or comments:</h2>
+            
+        <form action="mailto:jefejuell@yahoo.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br><br>
+            Comment:<br>
+            <input type="text" name="comment" size="50"><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h2><b>Sticks down can be discouraging, but StickUp is here to do the lifting for you!</b></h2>
+    
+    <script>
+        const yardCost = [
+        {serviceLevel: "minor", cost: 10},
+        {serviceLevel: "normal", cost: 20},
+        {serviceLevel: "major", cost: 30}
+        ]
+
+    function yardQuote() {
+        var person = window.prompt("Thank you for your interest in Stick Up's services. Please tell us your name.","Type your name please.");
+
+        if (person != null) {
+            var service = window.prompt(person + ", we will be happy to provide you with a quote", "Briefly describe the current condition of your property.");
+            }
+        if (service != null) {
+            var serviceLevel = window.prompt("Judging by your description, would you categorize the job as minor, normal, or major? " + "Your description: " + service, "Please enter Minor, Normal, or Major");
+            }
+        if (serviceLevel != null) {
+            var address = window.prompt("You have reached out to a professional team " + person + "! " + "We would like to take a look at the property.  What is your address?", "Please type in your address.");
+            }
+        if (serviceLevel.toLowerCase() === 'minor') {
+            var cost = '$10';
+          } else if (serviceLevel.toLowerCase() === 'normal') {
+            var cost = '$20';
+          } else if (serviceLevel.toLowerCase() === 'major') {
+            var cost = '$30';
+            }
+
+        if (address != null & serviceLevel != null & service != null & person != null) {
+            alert("Thank you for your interest in StickUp's services.  An initial esimate of the job cost is " + cost + ". " + "We will be in touch with you shortly to schedule a consultation.");
+          } 
+    }
+    </script>
+
+    </body>
+
+    <footer><b>Powered by JJDev</b></footer>
+</html>
