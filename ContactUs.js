@@ -1,6 +1,4 @@
-
-
-
+//Declare array variables
 var quoteArray = [];
 const yardCost = [
     ['minor', 10],
