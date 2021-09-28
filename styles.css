@@ -30,6 +30,7 @@ form {
 }
 
 .buttons {
-    font-size: 30px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
 }
