@@ -8,5 +8,8 @@ SticksUp is a website project that was created as a neighborhood business to ser
 To view SticksUp, please visit https://jefejuell.github.io/StickUp-WebsiteProject. 
 
 ### **Roadmap of future improvements**
-Additional features will be to modify the html and js files to use the created DOM parent and child nodes throughout the site to create alerts and gather more information from users/clients.
+Additional features will be added to: 
+
+*modify the html and js files to use the created DOM parent and child nodes throughout the site to create alerts and gather more information from users/clients.
+*Add "Mail me a copy" checkbox option to the form OR possibly add a CONTACT FORM in lieu of a mailto form
   
