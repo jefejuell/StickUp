@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    float: right;
+    display: flex;
 }
  
 footer {
@@ -33,4 +33,10 @@ form {
     font-size: 20px;
     padding: 5px;
     border-radius: 80%;
+}
+
+#header-img {
+    display: flex;
+    width: 100px;
+    height: 100px;
 }

@@ -12,8 +12,8 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-dist/css/bootstrap.min.css">
-
-    <!-- Styles for the grid template at the bottom -->
+<link rel="stylesheet" href="styles.css">
+    <!-- Styles for the grid template on Product page at bottom of style section -->
     <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -50,17 +50,18 @@
                 "product footer footer";
         }
       </style>
-
   
       <!-- Custom styles for this template -->
       <link href="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-examples/navbars/navbar.css" rel="stylesheet">
   </head>
+
+
   <body>
  
   <main>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="https://jefejuell.github.io/StickUp-WebsiteProject/">
             <img src="./images/StickUpLogo.jpeg" alt="" width="24" height="24" class="d-inline-block align-text-top">
             SticksUp
           </a>
@@ -84,7 +85,24 @@
             </ul>
           </div>
         </div>
-      </nav>
+    </nav>
+    
+    <header id="header">
+        <img id="header-img" src="./images/StickUpLogo.jpeg" alt="SticksUp Logo" >
+        <!--Fix User Story #5 below (nav-links take to corresponding section of product page)-->
+        <nav id="nav-bar">
+                <a class="nav-link" href=""><em>HATS</em></a>
+                <a class="nav-link" href=""><em>SHIRTS</em></a>
+                <a class="nav-link" href=""><em>ACCESSORIES</em></a>
+        </nav>
+    </header>
+
+    <form id="form">
+        <input id="email" type="text" placeholder="Please enter email address" required>
+        <input id="submit" type="submit" value="Get Gear Samples">
+
+    </form>
+
     <div class="container">
         <div class="item1">1</div>
         <div class="item2">2</div>
