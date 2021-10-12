@@ -1,3 +1,5 @@
+/*  Styles for Home, Services and Pricing & Contact pages */
+
 * {
     box-sizing: border-box;
     margin-left: 5px;
@@ -39,4 +41,10 @@ form {
     display: flex;
     width: 100px;
     height: 100px;
+}
+#form  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }

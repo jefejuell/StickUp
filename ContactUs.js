@@ -67,6 +67,14 @@ function yardQuote() {
 console.log(quoteArray);
 }
 
+function emailAdd () {
+    var contactArray = [];
+    var emailPerson = window.prompt("Thank you for your interest in SticksUP. Please tell us your name.", "Type your name please.");
+
+    if (emailPerson != null && emailPerson != "Please type your name please.") {
+        alert(emailPerson + " , we are excited to have you gear UP with SticksUP!");
+    }
+}
     /*if (serviceLevel.toLowerCase() === 'minor') {
         cost = yardCost[0][1];
       } else if (serviceLevel.toLowerCase() === 'normal') {
