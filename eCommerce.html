@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-dist/css/bootstrap.min.css">
 
+    <!-- Styles for the grid template at the bottom -->
     <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -27,7 +28,29 @@
             font-size: 3.5rem;
           }
         }
+
+        .item1{background:LightSkyBlue;}
+        .item2{background:LightSalmon;}
+        .item3{background:PaleTurquoise;}
+        .item4{background:LightPink;}
+        .item5{background:PaleGreen;}
+
+        .container {
+            font-size: 40px;
+            height: auto;
+            max-width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: 20% 40% 40%;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            grid-template-areas: 
+                "header header header"
+                "product content content"
+                "product footer footer";
+        }
       </style>
+
   
       <!-- Custom styles for this template -->
       <link href="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-examples/navbars/navbar.css" rel="stylesheet">
@@ -62,7 +85,14 @@
           </div>
         </div>
       </nav>
-   </main>    
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+  </main>    
 
     <script src="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
 
