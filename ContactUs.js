@@ -68,7 +68,7 @@ console.log(quoteArray);
 }
 
 window.addEventListener( "load", function () {
-    function emailAdd() {
+    function sendEmail() {
         const XHR = new XMLHttpRequest();
         const EA = new FormData( form ); //EA is "email address"; Bind the FormData object and the form element
 
@@ -90,7 +90,7 @@ window.addEventListener( "load", function () {
         form.addEventListener( "submit", function (event) {
             event.preventDefault();
     
-            emailAdd();
+            sendEmail();
         } );
     } );
 

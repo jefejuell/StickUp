@@ -48,3 +48,34 @@ form {
     flex-wrap: wrap;
     
 }
+
+.item1{background:LightSkyBlue;}
+.item2{background:LightSalmon;}
+.item3{background:PaleTurquoise;}
+.item4{background:LightPink;}
+.item5{background:PaleGreen;}
+
+.container {
+    padding: 10px;
+    font-size: 40px;
+    height: 1500px;
+    max-width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-self: center;
+    grid-template-areas: 
+        "product product content"
+        "product product content"
+        "content footer footer";
+}
+
+#video {
+    padding: 10px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+}
