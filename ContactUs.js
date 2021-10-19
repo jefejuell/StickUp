@@ -70,12 +70,12 @@ console.log(quoteArray);
 window.addEventListener( "load", function () {
     function sendEmail() {
         const XHR = new XMLHttpRequest();
-        const EA = new FormData( form ); //EA is "email address"; Bind the FormData object and the form element
+        const EA = new FormData("form"); //EA stands for "email address"; Bind the FormData object and the form element
 
         XHR.addEventListener( "load", function(event) {
             var emailPerson = window.prompt("Thank you for your interest in SticksUP. Please tell us your name.", "Type your name please.");
 
-            if (emailPerson != null && emailPerson != "Please type your name please.") {
+            if (emailPerson != null && emailPerson != "Type your name please.") {
                 alert(emailPerson + " , we are excited to have you gear UP with SticksUP!");
             };
         } );
