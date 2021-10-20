@@ -93,8 +93,16 @@
         <section id="accessories" class="item5">Accessories</section>
         <section id="pants" class="item6">Pants</section>
         <div class="item7">Advertisement</div>
-        <div class="item8">Vote on your favorite<em>Hat</em> style!
-            <input type="radio" id="Ballcap" name="Ballcap" value="Ballcap">
+        <div class="item8"><b>Vote on your favorite<em>Hat</em> style!></b><br>
+            <form method="POST" action="Result.php">
+              <input type="radio" id="Ballcap" name="fav-hat" value="Ballcap">
+              <label for="Ballcap">Ballcap</label><br><br>
+              <input type="radio" id="CowboyHat" name="fav-hat" value="CowboyHat">
+              <label for="CowboyHat">Cowboy Hat</label><br><br>
+              <input type="radio" id="NeckGaiter" name="fav-hat" value="NeckGaiter">
+              <label for="NeckGaiter">Neck Gaiter</label><br><br>
+              <input type="submit" value="Vote" name="Result"> <!--This button opens Vote.php-->
+            </form>
         </div>
         <div class="item9">
           <iframe id=video width="560" height="315" src="https://www.youtube.com/embed/P-PlbxOnzFU?start=223" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
