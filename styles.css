@@ -57,10 +57,11 @@ form {
     background:LightSkyBlue;
     
 }
-.item2{background:LightSalmon;}
+.item2{background:rgb(231, 231, 65);}
 .item3{background:PaleTurquoise;}
-.item4{background:LightPink;}
+.item4{background:rgb(231, 231, 65);}
 .item5{background:PaleGreen;}
+.item6{background:rgb(231, 231, 65);}
 
 .container {
     padding: 10px;
