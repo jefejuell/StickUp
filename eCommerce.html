@@ -12,8 +12,9 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="./bootstrap.min.css">
+
 <link rel="stylesheet" href="./styles.css">
-    <!-- Styles for the Product Page grid template at bottom of style section below -->
+   
     <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -34,9 +35,7 @@
       <link href="./navbar.css" rel="stylesheet"> <!--GitHub file copy-->
   </head>
 
-
-  <body>
- 
+<body>
   <main>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -73,7 +72,7 @@
         <input id="submit" type="submit" value="Send for opportunities to win!">
     </form><br><br>
 
-    <div class="container">
+    <div class="container2">
         <div class="item1"><h2>Product Specifications</h2>
           <ul>
             <li>Durable materials</li>
@@ -93,7 +92,8 @@
         <section id="accessories" class="item5">Accessories</section>
         <section id="pants" class="item6">Pants</section>
         <div class="item7">Advertisement</div>
-        <div class="item8"><b>Vote on your favorite<em>Hat</em> style!></b><br>
+        <!--Below div creates a section that sends results to a server-->
+        <div class="item8"><b>Vote on your favorite<em>Hat</em> style!></b><br>   
             <form method="POST" action="Result.php">
               <input type="radio" id="Ballcap" name="fav-hat" value="Ballcap">
               <label for="Ballcap">Ballcap</label><br><br>
@@ -108,12 +108,12 @@
           <iframe id=video width="560" height="315" src="https://www.youtube.com/embed/P-PlbxOnzFU?start=223" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-  </main>    
+    </main>    
 
     <script src="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
 
-    <!--  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    </body>   -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>  
 
     <h2 style="padding:5px;"><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></h2>
 

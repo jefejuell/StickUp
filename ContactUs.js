@@ -94,7 +94,38 @@ window.addEventListener( "load", function () {
         } );
     } );
 
+    //Code below constructs a map instance with streets style
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZWp1ZWxsIiwiYSI6ImNrdGZ6aTlpaTBkOWczMm5sMDdja3UwanYifQ.0bEdPWVZftSkB8c9ZUSBOw';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center:  [-90.370760, 38.636210],
+        zoom: 10
+        });
+    
+    map.addControl(new mapboxgl.NavigationControl());
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-90.470760, 38.636210])
+        .addTo(map);
+    
+    const marker2 = new mapboxgl.Marker()
+        .setLngLat([-90.495769, 38.701884])
+        .addTo(map);
 
+    const marker3 = new mapboxgl.Marker()
+        .setLngLat([-90.270020, 38.635078])
+        .addTo(map);
+
+    //Add clickable interface that enables user to change styles
+    const layerList = document.getElementById('menu');
+    const inputs = layerList.getElementsByTagName('input');
+    
+    for (const input of inputs) {
+        input.onclick = (layer) => {
+            const layerId = layer.target.id;
+            map.setStyle('mapbox://styles/mapbox/' + layerId);
+        };
+    }    
     /*if (serviceLevel.toLowerCase() === 'minor') {
         cost = yardCost[0][1];
       } else if (serviceLevel.toLowerCase() === 'normal') {

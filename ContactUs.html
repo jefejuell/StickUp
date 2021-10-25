@@ -2,8 +2,13 @@
 <html>
     <head>
         <title>SticksUp Contact</title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="styles.css">
+
+        <!--Adds the library and styles for the mapbox API-->
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+      <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
     </head>
 
     <header>
@@ -20,34 +25,62 @@
         
         <div class="header">
             <h1 id="company"><b>SticksUp Inc.</b></h1>
-            <h2>Please click the button below to get a <mark>no obligation quote</mark>!</h2>
         </div>    
 
-        <!--Call the declared function in ContactUs.js-->
-        <button onclick = "yardQuote()" id='quoteButton' style= "padding:20px; border-radius:10px; font-size: 30px;"><b>Click for a Quote!</b></button><br>
+        <div class="container">
+            <div id = "quote">
+                <h2>Please click the button below to get a <mark>no obligation quote</mark>!</h2>
+                <!--Calls the declared function in ContactUs.js-->
+                <button onclick = "yardQuote()" id='quoteButton' style= "padding:20px; border-radius:10px; font-size: 30px;"><b>Click for a Quote!</b></button><br>
+            </div>
+                
+            <div id="contactForm">
+                <h2>Email our customer service contact with questions or comments:</h2>
+                <!--User input (comment) email form.  The name and email fields are required-->
+                <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="application/x-www-form-urlencoded" id="contact">
+                    Name:<br>
+                    <input type="text" name="name" required><br><br>
+                    E-mail:<br>
+                    <input type="email" name="email" required><br><br>
+                    Comment:<br>
+                    <input type="text" name="comment" size="50"><br><br>
+                    Mail me a copy:
+                    <input type="checkbox" value="CopyMe"> 
+                    <input type="submit" value="Send" class = "buttons">
+                    <input type="reset" value="Reset" class = "buttons">
+                </form>
+                <!--TO DO: Add "Mail me a copy" checkbox option to the form
+                OR possibly add a CONTACT FORM in lieu of a mailto form-->
+            </div>
 
-        <br><h2>Email our customer service contact with questions or comments:</h2>
-            
-        <!--User input (comment) email form.  The name and email fields are required-->
-        <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="application/x-www-form-urlencoded" id="contact">
-            Name:<br>
-            <input type="text" name="name" required><br><br>
-            E-mail:<br>
-            <input type="email" name="email" required><br><br>
-            Comment:<br>
-            <input type="text" name="comment" size="50"><br><br>
-            <input type="submit" value="Send" class = "buttons">
-            <input type="reset" value="Reset" class = "buttons">
-        </form>
-        <!--TO DO: Add "Mail me a copy" checkbox option to the form
-        OR possibly add a CONTACT FORM in lieu of a mailto form-->
+            <div id="notices" style='display: flex; justify-self: flex-end;'>
+                <h2>Use the map at right to see our service area and locations</h2>
+            </div>
+
+            <div id='map' style='width: 500px; height: auto;'></div>
+            <div></div>
+            <div id="menu" class="map-overlay top">
+                <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+                <!-- See a list of Mapbox-hosted public styles at -->
+                <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+                <label for="satellite-v9">satellite</label>
+                <input id="light-v10" type="radio" name="rtoggle" value="light">
+                <label for="light-v10">light</label>
+                <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+                <label for="dark-v10">dark</label>
+                <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
+                <label for="streets-v11">streets</label>
+                <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+                <label for="outdoors-v11">outdoors</label>
+                </div>
+        </div>
+
+        <h2 style='text-align: center;'><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></h2>
 
 
-        <h2><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></h2>
+        <script src="ContactUs.js"></script>
 
     </body>
-
-    <script src="ContactUs.js"></script>
 
     <footer><b>Powered by JJDev</b></footer>
 </html>
