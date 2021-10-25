@@ -102,8 +102,9 @@ window.addEventListener( "load", function () {
         center:  [-90.370760, 38.636210],
         zoom: 10
         });
-    
+    //Adds navigation controls
     map.addControl(new mapboxgl.NavigationControl());
+    //Adds location markers
     const marker = new mapboxgl.Marker()
         .setLngLat([-90.470760, 38.636210])
         .addTo(map);
@@ -116,7 +117,7 @@ window.addEventListener( "load", function () {
         .setLngLat([-90.270020, 38.635078])
         .addTo(map);
 
-    //Add clickable interface that enables user to change styles
+    //Add clickable interface that enables user to change map styles
     const layerList = document.getElementById('menu');
     const inputs = layerList.getElementsByTagName('input');
     
