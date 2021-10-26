@@ -18,6 +18,23 @@ header {
     color: white;
 }
  
+#dragDiv {
+    position: absolute;
+    background-color: rgba(117, 57, 29, 0.808);
+    color: rgb(190, 174, 174);
+    z-index: 8;
+    left: 30;
+    bottom: 230;
+    border: 2px solid #d3d3d3;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#dragDivHeader {
+    background: rgb(0, 70, 0);
+    color: rgb(231, 231, 65) 
+} 
+
 .nav-link {
     color: white;
     font-size: larger;
