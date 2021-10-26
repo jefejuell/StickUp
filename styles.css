@@ -31,8 +31,11 @@ header {
 }
 
 #dragDivHeader {
-    background: rgb(0, 70, 0);
-    color: rgb(231, 231, 65) 
+    background-color: rgb(0, 70, 0);
+    color: rgb(231, 231, 65); 
+    z-index: 10;
+    padding: 10px;
+    cursor: move;
 } 
 
 .nav-link {
