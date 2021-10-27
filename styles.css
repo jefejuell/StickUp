@@ -124,9 +124,7 @@ form {
         "advert content advert";
 }
 
-.item1{
-    background:LightSkyBlue;
-}
+.item1{background:LightSkyBlue;}
 .item2{background:rgb(231, 231, 65);}
 .item3{background:LightSkyBlue;}
 .item4{background:rgb(231, 231, 65);}
@@ -134,7 +132,7 @@ form {
 .item6{background:rgb(231, 231, 65);}
 .item7{background:LightSkyBlue;}
 .item8{background:rgb(231, 231, 65);}
-.item9{background: lightskyblue;}
+.item9{background:lightskyblue;}
 
 #video {
     padding: 10px;
