@@ -67,59 +67,32 @@ function yardQuote() {
 console.log(quoteArray);
 }
 
-window.addEventListener( "load", function () {
-    function sendEmail() {
-        const XHR = new XMLHttpRequest();
-        const EA = new FormData("form"); //EA stands for "email address"; Bind the FormData object and the form element
-
-        XHR.addEventListener( "load", function(event) {
-            var emailPerson = window.prompt("Thank you for your interest in SticksUP. Please tell us your name.", "Type your name please.");
-
-            if (emailPerson != null && emailPerson != "Type your name please.") {
-                alert(emailPerson + " , we are excited to have you gear UP with SticksUP!");
-            };
-        } );
-        XHR.addEventListener( "error", function(event) {
-            alert('Oops! Something went wrong.');
-        } );
-
-        XHR.open( "POST", "https://www.freecodecamp.com/email-submit");
-        XHR.send( EA );
-    }
-        const form = document.getElementById("form");
-        form.addEventListener( "submit", function (event) {
-            event.preventDefault();
-    
-            sendEmail();
-        } );
-    } );
-
-    //Code below constructs a map instance with streets style
-    mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZWp1ZWxsIiwiYSI6ImNrdGZ6aTlpaTBkOWczMm5sMDdja3UwanYifQ.0bEdPWVZftSkB8c9ZUSBOw';
-        const map = new mapboxgl.Map({
+//Code below constructs a map instance with streets style
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZWp1ZWxsIiwiYSI6ImNrdGZ6aTlpaTBkOWczMm5sMDdja3UwanYifQ.0bEdPWVZftSkB8c9ZUSBOw';
+    const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center:  [-90.370760, 38.636210],
         zoom: 10
         });
     //Adds navigation controls
-    map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl());
     //Adds location markers
-    const marker = new mapboxgl.Marker()
-        .setLngLat([-90.470760, 38.636210])
-        .addTo(map);
+const marker = new mapboxgl.Marker()
+    .setLngLat([-90.470760, 38.636210])
+    .addTo(map);
     
-    const marker2 = new mapboxgl.Marker()
-        .setLngLat([-90.495769, 38.701884])
-        .addTo(map);
+const marker2 = new mapboxgl.Marker()
+    .setLngLat([-90.495769, 38.701884])
+    .addTo(map);
 
-    const marker3 = new mapboxgl.Marker()
-        .setLngLat([-90.270020, 38.635078])
-        .addTo(map);
+const marker3 = new mapboxgl.Marker()
+    .setLngLat([-90.270020, 38.635078])
+    .addTo(map);    
 
     //Add clickable interface that enables user to change map styles
-    const layerList = document.getElementById('menu');
-    const inputs = layerList.getElementsByTagName('input');
+const layerList = document.getElementById('menu');
+const inputs = layerList.getElementsByTagName('input');
     
     for (const input of inputs) {
         input.onclick = (layer) => {
@@ -127,6 +100,71 @@ window.addEventListener( "load", function () {
             map.setStyle('mapbox://styles/mapbox/' + layerId);
         };
     }    
+
+
+// /* Given a query in the form "lng, lat" or "lat, lng"
+// * returns the matching geographic coordinate(s)
+// * as search results in carmen geojson format,
+// * https://github.com/mapbox/carmen/blob/master/carmen-geojson.md */
+// const coordinatesGeocoder = function (query) {
+//     // Match anything which looks like
+//     // decimal degrees coordinate pair.
+//     const matches = query.match(
+//     /^[ ]*(?:Lat: )?(-?\d+\.?\d*)[, ]+(?:Lng: )?(-?\d+\.?\d*)[ ]*$/i
+//     );
+//     if (!matches) {
+//     return null;
+//     }
+     
+//     function coordinateFeature(lng, lat) {
+//         return {
+//             center: [lng, lat],
+//             geometry: {
+//             type: 'Point',
+//             coordinates: [lng, lat]
+//             },
+//             place_name: 'Lat: ' + lat + ' Lng: ' + lng,
+//             place_type: ['coordinate'],
+//             properties: {},
+//             type: 'Feature'
+//         };
+//     }
+     
+//     const coord1 = Number(matches[1]);
+//     const coord2 = Number(matches[2]);
+//     const geocodes = [];
+     
+//     if (coord1 < -90 || coord1 > 90) {
+//     // must be lng, lat
+//         geocodes.push(coordinateFeature(coord1, coord2));
+//     }
+     
+//     if (coord2 < -90 || coord2 > 90) {
+//     // must be lat, lng
+//         geocodes.push(coordinateFeature(coord2, coord1));
+//     }
+     
+//     if (geocodes.length === 0) {
+//     // else could be either lng, lat or lat, lng
+//         geocodes.push(coordinateFeature(coord1, coord2));
+//         geocodes.push(coordinateFeature(coord2, coord1));
+//     }
+     
+//     return geocodes;
+//     };
+     
+//     // Add the control to the map.
+// map.addControl(
+//     new MapboxGeocoder({
+//     accessToken: mapboxgl.accessToken,
+//     localGeocoder: coordinatesGeocoder,
+//     zoom: 4,
+//     placeholder: 'Try: -40, 170',
+//     mapboxgl: mapboxgl,
+//     reverseGeocode: true
+//     })
+// );
+
     /*if (serviceLevel.toLowerCase() === 'minor') {
         cost = yardCost[0][1];
       } else if (serviceLevel.toLowerCase() === 'normal') {

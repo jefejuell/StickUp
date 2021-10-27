@@ -38,7 +38,7 @@
             <div id="contactForm">
                 <h2>Email our customer service contact with questions or comments:</h2>
                 <!--User input (comment) email form.  The name and email fields are required-->
-                <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="application/x-www-form-urlencoded" id="contact" target="_blank">
+                <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="text/plain" id="contact" target="_blank">
                     Name:<br>
                     <input type="text" name="name" required><br><br>
                     E-mail:<br>
@@ -51,6 +51,7 @@
                     <input type="reset" value="Reset" class = "buttons">
                 </form>
                 <!--TO DO: Add "Mail me a copy" checkbox option to the form
+                enctype="application/x-www-form-urlencoded" 
                 OR possibly add a CONTACT FORM in lieu of a mailto form-->
             </div>
 
@@ -80,6 +81,10 @@
 
 
         <script src="ContactUs.js"></script>
+        <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+
+        <!-- <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css"> -->
 
     </body>
 

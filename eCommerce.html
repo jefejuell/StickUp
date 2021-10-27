@@ -94,14 +94,14 @@
         <div class="item7">Advertisement</div>
         <!--Below div creates a section that sends results to a server-->
         <div class="item8"><b>Vote on your favorite<em>Hat</em> style!></b><br>   
-            <form method="POST" action="Result.php">
+            <form method="post" action="Result.php" id="voteform">
               <input type="radio" id="Ballcap" name="fav-hat" value="Ballcap">
               <label for="Ballcap">Ballcap</label><br><br>
               <input type="radio" id="CowboyHat" name="fav-hat" value="CowboyHat">
               <label for="CowboyHat">Cowboy Hat</label><br><br>
               <input type="radio" id="NeckGaiter" name="fav-hat" value="NeckGaiter">
               <label for="NeckGaiter">Neck Gaiter</label><br><br>
-              <input type="submit" value="Vote" name="Result"> <!--This button opens Vote.php-->
+              <input type="submit" value="Vote" name="Result">   <!--This button opens Result.php-->
             </form>
         </div>
         <div class="item9">
@@ -109,7 +109,7 @@
         </div>
       </div>
     </main>    
-
+    <script src="eCommerce.js"></script>
     <script src="/Users/jeffjuell/Documents/Coding/Bootstrap/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

@@ -1,11 +1,12 @@
-let stick = document.getElementById("dragDiv");
+//let stick = document.getElementById("dragDiv");
+dragElement(document.getElementById("dragDiv"));
 
-function dragElement(stick) {
+function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(stick.id + "header")) {
-        document.getElementById(stick.id + "header").onmousedown = dragMouseDown;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
     } else {
-        stick.onmousedown = dragMouseDown;
+        elmnt.onmousedown = dragMouseDown;
     }
 
     function dragMouseDown(e) {
@@ -24,8 +25,8 @@ function dragElement(stick) {
         pos2 = pos4 = e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        stick.style.top = (stick.offsetTop - pos2) + "px";
-        stick.style.left = (stick.offsetLeft - pos1) + "px";
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
     function closeDragElement() {
