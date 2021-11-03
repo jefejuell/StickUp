@@ -9,6 +9,7 @@
 body {
     background: rgb(171, 242, 171);
     padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 header {
@@ -37,6 +38,10 @@ header {
     padding: 10px;
     cursor: move;
 } 
+
+.navbar {
+    margin-bottom: 20px;
+  }
 
 .nav-link {
     color: white;
@@ -111,7 +116,7 @@ form {
     padding: 10px;
     font-size: 20px;
     height: 1500px;
-    max-width: 100%;
+    max-width: auto;
     background: LightGray;
     display: grid;
     grid-template-columns: 20% 40% 40%;
@@ -124,7 +129,7 @@ form {
         "advert content advert";
 }
 
-.item1{background:LightSkyBlue;}
+.item1{background:LightSkyBlue; font-size: 3vw}
 .item2{background:rgb(231, 231, 65);}
 .item3{background:LightSkyBlue;}
 .item4{background:rgb(231, 231, 65);}
