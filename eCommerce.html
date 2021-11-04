@@ -69,6 +69,18 @@
         <input id="submit" type="submit" value="Send for opportunities to win!" style="font-weight: bold;">
     </form><br><br>
 
+    <p>
+      The hats are my favorite logo gear.
+      <div class="like_button_container" data-commentid="1"></div>
+    </p>
+    <p>
+      The shirts are my favorite logo gear.
+      <div class="like_button_container" data-commentid="2"></div>
+    </p>
+    <p>
+      The pants are my favorite logo gear.
+      <div class="like_button_container" data-commentid="3"></div>
+    </p>
     <div class="container2">
         <div class="item1"><h2>Product Specifications</h2>
           <ul>
@@ -86,7 +98,9 @@
             <li>Supports small business</li>
           </ul>
         </div>
-        <section id="accessories" class="item5"><h2>Accessories</h2></section>
+        <section id="accessories" class="item5"><h2>Accessories</h2>
+          <div id="like_button1_container"></div>
+        </section>
         <section id="pants" class="item6"><h2>Pants</h2></section>
         <div class="item7"><h2>Advertisement</h2></div>
         <!--Below div creates a section that sends results to a server-->
@@ -112,6 +126,16 @@
     <script src="./bootstrap.bundle.mis.js"></script>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React components. -->
+    <script src="like_button.js"></script>
+    <script src="like_button3.js"></script>
+
   </body>  
 
     <h2 style="padding:5px; text-align:center"><em><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></em></h2>
