@@ -65,6 +65,7 @@ function yardQuote() {
         alert("Thank you for your interest in SticksUp's services.  An initial esimate of the job cost is $" + cost + ". " + "We will be in touch with you shortly to schedule a consultation.")
     } 
 console.log(quoteArray);
+//console.log(quoteDiv);
 }
 
 //Code below constructs a map instance with streets style
