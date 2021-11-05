@@ -55,11 +55,13 @@
                 OR possibly add a CONTACT FORM in lieu of a mailto form-->
             </div>
 
-            <div id="notices">
+            <div id="notices" style="font-size: 70%;">
                 <h1><em>Notices:</em></h1>
                 <div id="like_button1_container"></div>
-                <h2>I enjoy seeing debris (and trash) removed from yards and nature!</h2>
-                <h2>Use the map at right to see our service area and locations</h2>
+                    <ul>
+                        <li><h2>I enjoy seeing debris (and trash) removed from yards and nature!</h2></li>
+                        <li><h2>Use the map at right to see our service area and locations</h2></li>
+                    </ul>
             </div>
 
             <div id='map' style='width: 500px; height: auto;'></div>
@@ -83,13 +85,14 @@
         <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></em></h2>
 
         <script src="ContactUs.js"></script>
+
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
 
          <!-- Load React. -->
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-        <!-- Load our React components. -->
+        <!-- Load React components. -->
         <script src="like_button.js"></script>
     </body>
 
