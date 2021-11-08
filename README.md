@@ -21,5 +21,6 @@ To view SticksUp, please visit https://jefejuell.github.io/StickUp-WebsiteProjec
 Additional features will be added to: 
 
 *Modify the html and js files to use the created DOM parent and child nodes throughout the site to create alerts and gather more information from users/clients.<br>
-*Test and refine the API's using PHP server (voting buttons, email form on ContactUs page).
+*Test and refine the API's using PHP server (voting buttons, email form on ContactUs page).<br>
+*Add Geocoder plugin functionality (https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/).
   
