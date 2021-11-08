@@ -10,7 +10,7 @@ To view SticksUp, please visit https://jefejuell.github.io/StickUp-WebsiteProjec
 ### **Iterations**
 1.0  Created website with pictures, logos, testimonials, and contact information.<br>
 1.1  Added a Contact Us Page with Quote Button<br>
-1.2  Added an Email comment option on the Contact Page<br>
+1.2  Added an Email comment option on the Contact Page<br><br>
 2.0  Added an interactive local Map, a Notices section with a Like button (React based) on the ContactUs page; Changed the layout to a responsive grid format<br>
 2.1  Added an email address submission, an embedded video<br>
 2.2  Added a eCommerce page (title is Logo Gear): includes Like buttons (React based), a NavBar that is responsive (toggles and stays at the top) using the Bootstrap library), page section links below the navbar<br>
