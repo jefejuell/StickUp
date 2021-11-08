@@ -1,5 +1,6 @@
 //Declare array variables
 var quoteArray = [];
+var quoteObjArray = [];
 const yardCost = [
     ['minor', 10],
     ['normal', 20],
@@ -7,6 +8,8 @@ const yardCost = [
     ];
 
 //This function is called from a button click on the SticksUp ContactUs.html page
+// let quoteButton = document.getElementById('quotebutton')
+// quoteButton.onclick = function () {
 function yardQuote() {
     let cost = undefined;
     var person = window.prompt("Thank you for your interest in Sticks Up's services. Please tell us your name.","Type your name please.");
@@ -59,13 +62,14 @@ function yardQuote() {
           break;
     }
     quoteArray.push(cost);
+    //quoteObjArray.push(quoteDiv);
 
     //Final alert window that presents the pricing quote and outlines next steps.
     if (address != null & serviceLevel != null & service != null & person != null & email != null) {
         alert("Thank you for your interest in SticksUp's services.  An initial esimate of the job cost is $" + cost + ". " + "We will be in touch with you shortly to schedule a consultation.")
     } 
 console.log(quoteArray);
-//console.log(quoteDiv);
+console.log(quoteObjArray);
 }
 
 //Code below constructs a map instance with streets style
