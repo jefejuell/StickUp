@@ -76,13 +76,13 @@ footer {
 #quote {
     background-color: lightskyblue;
 }
-#map {
+.map-overlay top {
     top: 0;
     bottom: 0;
-    width: 90%
+    width: 80%;
 }
   
-.map-overlay {
+#menu {
     padding: 10px;
     margin: auto;
     background: lightskyblue;
