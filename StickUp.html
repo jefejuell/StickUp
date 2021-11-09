@@ -17,21 +17,29 @@
         </style>
     </head>
 
-    <header>
-        <img src = "./images/StickUpLogo.jpeg" alt="SticksUp Logo" style = "float:right; height:150px; width:150px;margin-right: 400px;">
-    </header>
-
-    <body>
-        <nav style="font-size:150%">
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/"><b>SticksUp, Inc.</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html"><b>What We DO</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html"><b>Contact Us</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html"><b>Logo Gear</b></a>
+    <body style="background: rgb(171, 242, 171)">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://jefejuell.github.io/StickUp-WebsiteProject/">
+                <img src="./images/StickUpLogo.jpeg" alt="" width="30" height="30" class="d-inline-block align-text-bottom">
+                SticksUp
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/">Home</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html">Services</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html">Pricing & Contact</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html">Logo Gear</a>
+                </div>  
+              </div>
+            </div>
         </nav>
 
-        <div class="header">
-            <h1 id="company"><b>SticksUp Inc.</b></h1>
-            <h2><b>Sticks got you down? <mark>Contact SticksUp Today!</mark>  We'll stick up for you!</b></h2>
+        <div class="section" style="text-align: center;">
+            <h2><b>Sticks got you down?<mark> Contact SticksUp Today!</mark><br>We'll stick up for you!</b></h2>
         </div>
 
         <section style="color:green">
@@ -47,16 +55,26 @@
 
         <aside>
             <h2 id="testimonials"><b>Testimonials</b></h2>
-            <p>"SticksUp is the most responsive landscape team we have ever hired.  We'd hire them back any day."   ~Beth P., satisfied customer</p>
+            <p>"SticksUp is the most responsive landscape team we have ever hired.  We'd hire them back any day."      ~Beth P., satisfied customer</p>
             <p>"SticksUp is professional, thorough, and friendly.<br>I would highly recommend them to anyone."    ~Don S., super satisfied customer</p>
         </aside>
+        <div style="display: flex; justify-content: center;"> 
+            <img src = "./images/BranchesinYard3.jpg" alt="Branches in Yard" style="width:40%;height:auto;">
+            <img src = "./images/BranchesPile.jpg" alt="Branches Pile" style="width:40%;height:auto;">
+        </div>
+        <div style="display: flex; justify-content: center;"> 
+            <img src = "./images/BrancheswithRoad.jpg" alt="Branches in Road" style="width:40%;height:auto;">
+            <img src = "./images/BrancheswithHouse.jpg" alt="Branches with House" style="width:40%;height:auto;">
+        </div>
         
-         <img src = "./images/BranchesinYard3.jpg" alt="Branches in Yard" style="width:40%;height:auto;">
-         <img src = "./images/BranchesPile.jpg" alt="Branches Pile" style="width:40%;height:auto;">
-         <img src = "./images/BrancheswithRoad.jpg" alt="Branches in Road" style="width:40%;height:auto;">
-         <img src = "./images/BrancheswithHouse.jpg" alt="Branches with House" style="width:40%;height:auto;">
+        <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, <br> but SticksUp is here to do the lifting for you!</b></em></h2>
 
-         <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></em></h2>
+         <script src="./bootstrap.bundle.min.js"></script>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">  
+
+            <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="./bootstrap.min.css">
     </body>
 
     <footer><b>Powered by JJDev</b></footer>

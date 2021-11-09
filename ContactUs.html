@@ -3,34 +3,79 @@
     <head>
         <title>SticksUp Contact</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="eCommerce">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.88.1"> 
 
         <!--Adds the library and styles for the mapbox API-->
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">  
+
+        <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+    <link rel="stylesheet" href="./styles.css">
+       
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+            
+          </style>
     </head>
 
-    <header>
-        <img src = "./images/StickUpLogo.jpeg" alt="SticksUp Logo" style = "float:right; height:150px; width:150px;margin-right: 300px;">
-    </header>
-
-    <body>
+    <body style="background:rgb(171, 242, 171)">
         <!--Site Navigation Menu-->
-        <nav style="font-size:150%">
+        <!-- <nav style="font-size:150%">
             <a href="https://jefejuell.github.io/StickUp-WebsiteProject/"><b>SticksUp, Inc.</b></a>
             <a href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html"><b>What We DO</b></a>
             <a href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html"><b>Contact Us</b></a>
             <a href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html"><b>Logo Gear</b></a>
+        </nav> -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://jefejuell.github.io/StickUp-WebsiteProject/">
+                <img src="./images/StickUpLogo.jpeg" alt="" width="30" height="30" class="d-inline-block align-text-bottom">
+                SticksUp
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/">Home</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html">Services</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html">Pricing & Contact</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html">Logo Gear</a>
+                </div>  
+              </div>
+            </div>
         </nav>
         
-        <div class="header">
-            <h1 id="company"><b>SticksUp Inc.</b></h1>
-        </div>    
+        <header id="header">
+            <img id="header-img" src="./images/StickUpLogo.jpeg" alt="SticksUp Logo">
+            <nav id="nav-bar">
+                    <a class="nav-link" href="#notices"><em>Notices</em></a>
+                    <a class="nav-link" href="#map"><em>Map</em></a>            
+            </nav>
+        </header>  
 
         <div class="container">
             <div id = "quote">
-                <h2>Please click the button below to get a <br><mark>no obligation quote</mark>!</h2>
+                <h2>Please click the button below to get a <br>no obligation quote!</h2>
                 <!--Calls the declared function in ContactUs.js-->
                 <button onclick='yardQuote()' id='quoteButton' ><b>Click for a Quote!</b></button><br>
             </div>
@@ -45,7 +90,7 @@
                     E-mail:<br>
                     <input type="email" name="email" required><br><br>
                     Comment:<br>
-                    <input type="text" name="comment" size="50"><br><br>
+                    <input type="text" name="comment" size="40"><br><br>
                     Mail me a copy:
                     <input type="checkbox" value="CopyMe"> 
                     <input type="submit" value="Send" class = "buttons">
@@ -62,30 +107,35 @@
                     <ul>
                         <li><h2>I enjoy seeing debris (and trash) removed from yards and nature!</h2></li>
                         <li><h2>Use the map at right to see our service area and locations</h2></li>
+                        <li><h2><a href="https://greatriversgreenway.org/trash-bash/">Great Rivers Greenway upcoming cleanup!</a></h2></li>
                     </ul>
             </div>
-
+            
             <div id='map' style='width: 500px; height: auto;'></div>
               <div></div>  <!--This div places the overlay menu under the map-->
-              <div id="menu" class="map-overlay top">
-                <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
-                <label for="satellite-v9">satellite</label>
-                <input id="light-v10" type="radio" name="rtoggle" value="light">
-                <label for="light-v10">light</label>
-                <input id="dark-v10" type="radio" name="rtoggle" value="dark">
-                <label for="dark-v10">dark</label>
-                <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
-                <label for="streets-v11">streets</label>
-                <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
-                <label for="outdoors-v11">outdoors</label>
-            </div>
+                <!-- <div id="menu" class="map-overlay top">
+                    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+                    <label for="satellite-v9">satellite</label>
+                    <input id="light-v10" type="radio" name="rtoggle" value="light">
+                    <label for="light-v10">light</label>
+                    <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+                    <label for="dark-v10">dark</label>
+                    <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
+                    <label for="streets-v11">streets</label>
+                    <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+                    <label for="outdoors-v11">outdoors</label>
+                </div> -->
         </div>
-
-        <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></em></h2>
 
         <script src="ContactUs.js"></script>
 
+        <script src="./bootstrap.bundle.min.js"></script>
+
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+        <!-- Load the `mapbox-gl-geocoder` plugin. -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/ mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+        
 
          <!-- Load React. -->
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -93,6 +143,9 @@
 
         <!-- Load React components. -->
         <script src="like_button.js"></script>
+
+        <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, <br> but SticksUp is here to do the lifting for you!</b></em></h2>
+
     </body>
 
     <footer><b>Powered by JJDev</b></footer>

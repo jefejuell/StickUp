@@ -21,6 +21,7 @@ header {
  
 #dragDiv {
     position: absolute;
+    left: 150px;
     background-color: rgba(117, 57, 29, 0.808);
     color: rgb(190, 174, 174);
     z-index: 8;
@@ -42,6 +43,7 @@ header {
     border-radius:10px; 
     font-size: 30px;
 }
+
 .navbar {
     margin-bottom: 20px;
   }
@@ -61,7 +63,7 @@ footer {
 .container {
     padding: 10px;
     font-size: 20px;
-    height: 800px;
+    height: 1000px;
     max-width: auto;  
     background: rgb(231, 231, 65);  
     display: grid;
@@ -77,8 +79,8 @@ footer {
 #map {
     top: 0;
     bottom: 0;
-    width: 90%;
-  }
+    width: 90%
+}
   
 .map-overlay {
     padding: 10px;
@@ -132,10 +134,10 @@ form {
         "advert content advert";
 }
 
-.item1{background:LightSkyBlue; font-size: 70%}
+.item1{background:LightSkyBlue; font-size: 90%}
 .item2{background:rgb(231, 231, 65);}
 .item3{background:LightSkyBlue;}
-.item4{background:rgb(231, 231, 65);}
+.item4{background:rgb(231, 231, 65); font-size: 90%}
 .item5{background:LightSkyBlue;}
 .item6{background:rgb(231, 231, 65);}
 .item7{background:LightSkyBlue;}

@@ -97,6 +97,14 @@ const marker3 = new mapboxgl.Marker({color:'green'})
     //Adds navigation controls
     map.addControl(new mapboxgl.NavigationControl());
 
+    // Add the control to the map.
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+         })
+        );
+
     //Add clickable interface that enables user to change map styles
 const layerList = document.getElementById('menu');
 const inputs = layerList.getElementsByTagName('input');

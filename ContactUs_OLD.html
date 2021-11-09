@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SticksUp Contact</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="styles.css">
+
+        <!--Adds the library and styles for the mapbox API-->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+    </head>
+
+    <header>
+        <img src = "./images/StickUpLogo.jpeg" alt="SticksUp Logo" style = "float:right; height:150px; width:150px;margin-right: 300px;">
+    </header>
+
+    <body>
+        <!--Site Navigation Menu-->
+        <nav style="font-size:150%">
+            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/"><b>SticksUp, Inc.</b></a>
+            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html"><b>What We DO</b></a>
+            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html"><b>Contact Us</b></a>
+            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html"><b>Logo Gear</b></a>
+        </nav>
+        
+        <div class="header">
+            <h1 id="company"><b>SticksUp Inc.</b></h1>
+        </div>    
+
+        <div class="container">
+            <div id = "quote">
+                <h2>Please click the button below to get a <br><mark>no obligation quote</mark>!</h2>
+                <!--Calls the declared function in ContactUs.js-->
+                <button onclick='yardQuote()' id='quoteButton' ><b>Click for a Quote!</b></button><br>
+            </div>
+                
+            <div id="contactForm">
+                <h2>Email our customer service contact with questions or comments:</h2>
+                <!--User input (comment) email form.  The name and email fields are required
+                "Email.php"-->
+                <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="text/plain" id="contact" target="_blank">
+                    Name:<br>
+                    <input type="text" name="name" required><br><br>
+                    E-mail:<br>
+                    <input type="email" name="email" required><br><br>
+                    Comment:<br>
+                    <input type="text" name="comment" size="50"><br><br>
+                    Mail me a copy:
+                    <input type="checkbox" value="CopyMe"> 
+                    <input type="submit" value="Send" class = "buttons">
+                    <input type="reset" value="Reset" class = "buttons">
+                </form>
+                <!--TO DO: Add "Mail me a copy" checkbox option to the form
+                enctype="application/x-www-form-urlencoded" 
+                OR possibly add a CONTACT FORM in lieu of a mailto form-->
+            </div>
+
+            <div id="notices" style="font-size: 70%;">
+                <h1>Notices:</h1>
+                <div id="like_button1_container"></div>
+                    <ul>
+                        <li><h2>I enjoy seeing debris (and trash) removed from yards and nature!</h2></li>
+                        <li><h2>Use the map at right to see our service area and locations</h2></li>
+                    </ul>
+            </div>
+            
+            <div id='map' style='width: 500px; height: auto;'></div>
+              <div></div>  <!--This div places the overlay menu under the map-->
+              <div id="menu" class="map-overlay top">
+                <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
+                <label for="satellite-v9">satellite</label>
+                <input id="light-v10" type="radio" name="rtoggle" value="light">
+                <label for="light-v10">light</label>
+                <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+                <label for="dark-v10">dark</label>
+                <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
+                <label for="streets-v11">streets</label>
+                <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+                <label for="outdoors-v11">outdoors</label>
+            </div>
+        </div>
+
+        <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></em></h2>
+        
+
+        <script src="ContactUs.js"></script>
+
+        <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+        <!-- Load the `mapbox-gl-geocoder` plugin. -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/ mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+        
+
+         <!-- Load React. -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <!-- Load React components. -->
+        <script src="like_button.js"></script>
+    </body>
+
+    <footer><b>Powered by JJDev</b></footer>
+</html>

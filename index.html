@@ -5,21 +5,31 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <header>
-        <img src="./images/StickUpLogo.jpeg" alt="SticksUp Logo" style = "float:right; max-width: 150px; height: auto; margin-right: 400px;">
-    </header>
+    <body style="background: rgb(171, 242, 171)">
 
-    <body>
-        <nav style="font-size:150%">
-            <a href="https://jefejuell.github.io"><b>Portfolio</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/"><b>SticksUp, Inc.</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html"><b>What We DO</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html"><b>Contact Us</b></a>
-            <a href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html"><b>Logo Gear Products</b></a>
+        <!-- <iframe src="./navbar.html" frameborder="0"></iframe> -->
+
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://jefejuell.github.io/StickUp-WebsiteProject/">
+                <img src="./images/StickUpLogo.jpeg" alt="" width="30" height="30" class="d-inline-block align-text-bottom">
+                SticksUp
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/">Home</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/StickUp.html">Services</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html">Pricing & Contact</a>
+                  <a class="nav-link active" aria-current="page" target="_top" href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html">Logo Gear</a>
+                </div>  
+              </div>
+            </div>
         </nav>
-        
-        <div class="section">
-            <h1 id="company"><b>SticksUp Inc.</b></h1>
+
+        <div class="section" style="text-align: center;">
             <h2><b>Sticks got you down?<mark> Contact SticksUp Today!</mark><br>We'll stick up for you!</b></h2>
         </div>
         
@@ -30,14 +40,22 @@
                 <p>the Woods</p>
         </div>
 
-         <img src = "./images/BranchesinYard1.jpg" alt="Branches in Yard" style="Width:40%;height:auto;">
-         <img src = "./images/BranchesinYard2.jpg" alt="Branches in Yard" style="width:40%;height:auto;">
+        <div style="display: flex; justify-content: center;"> 
+            <img src = "./images/BranchesinYard1.jpg" alt="Branches in Yard" style="Width:40%;height:auto;">
+            <img src = "./images/BranchesinYard2.jpg" alt="Branches in Yard" style="width:40%;height:auto;">
+        </div>
 
-        <h2><b>Sticks down can be discouraging, but SticksUp is here to do the lifting for you!</b></h2>
-
+         <h2 style='text-align: center;'><em><b>Sticks down can be discouraging, <br> but SticksUp is here to do the lifting for you!</b></em></h2>
         <br><br><h1 style="text-align:center;"><b><span style= "font-style:italic" >MISSION:  </span>We strive to keep yards free of debris so that yards can look the best and lawn mowers can work the best!</b></h1>
 
         <script src="./elementDrag.js"></script>
+
+        <script src="./bootstrap.bundle.min.js"></script>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">  
+
+            <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="./bootstrap.min.css">
     </body>
 
     <footer><b>Powered by JJDev</b></footer>
