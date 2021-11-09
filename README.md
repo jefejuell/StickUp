@@ -15,8 +15,9 @@ To view SticksUp, please visit https://jefejuell.github.io/StickUp-WebsiteProjec
 2.1  Added an email address submission, an embedded video<br>
 2.2  Added a eCommerce page (title is Logo Gear): includes Like buttons (React based), a NavBar that is responsive (toggles and stays at the top) using the Bootstrap library), page section links below the navbar<br>
 2.3  Added a click an drag element (Bundle of sticks to pick up) on the home page.<br>
-2.4 Added a Voting section for favorite logo gear (uses PHP script file), but need to test with PHP server. (https://www.php.net/manual/en/features.commandline.webserver.php)
-
+2.4  Added a Voting section for favorite logo gear (uses PHP script file), but need to test with PHP server.<br>
+(https://www.php.net/manual/en/features.commandline.webserver.php)
+2.5  Redesigned the Navbars, etc. for the webpages to have consistent styling
 
 ### **Roadmap of future improvements**
 Additional features will be added to: 
