@@ -71,6 +71,7 @@ footer {
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
     text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .map-overlay top {
