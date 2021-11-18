@@ -63,7 +63,7 @@ footer {
 .container {
     padding: 10px;
     font-size: 20px;
-    height: 1000px;
+    height: auto;
     max-width: auto;  
     background: rgb(231, 231, 65);  
     display: grid;
