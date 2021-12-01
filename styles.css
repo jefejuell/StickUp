@@ -120,7 +120,7 @@ form {
     font-size: 20px;
     height: auto;
     max-width: auto;
-    background: LightGray;
+    background: rgb(153, 140, 140);
     display: grid;
     grid-template-columns: 20% 40% 40%;
     grid-template-rows: 1fr 1fr 1fr;
