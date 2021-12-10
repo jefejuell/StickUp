@@ -82,10 +82,11 @@
                 
             <div id="contactForm" style="background-color: lightskyblue;">
                 <h2>Email our customer service contact with questions or comments:</h2>
-                <!--User input (comment) email form.  The name and email fields are required
+                <!--User input (comment) email form.  The name and email fields are required.
                 "Email.php"-->
-                <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="text/plain" id="contact" target="_blank">
-                    Name:<br>
+                <!-- <form action="mailto:jefejuell@yahoo.com?subject=Comment" method="post" enctype="text/plain" id="contact" target="_blank"> -->
+                <form action="Email.php" method="post" enctype="text/plain" name="myemailform" id="contact" target="_blank">  
+                  Name:<br>
                     <input type="text" name="name" required><br><br>
                     E-mail:<br>
                     <input type="email" name="email" required><br><br>
